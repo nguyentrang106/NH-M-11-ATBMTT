@@ -1,4 +1,4 @@
-# --- Tệp: sha256.py ---
+#Tệp: sha256.py 
 
 def hash_sha256(message):
     """
