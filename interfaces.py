@@ -1,4 +1,4 @@
-# --- Định dạng cho rsa_math.py / keygen.py ---
+#Định dạng cho rsa_math.py / keygen.py
 def generate_key_pair(keysize):
     """
     Hàm tạo cặp khóa RSA.
@@ -7,7 +7,7 @@ def generate_key_pair(keysize):
     """
     pass
 
-# --- Định dạng cho sha256.py ---
+#Định dạng cho sha256.py
 def hash_sha256(message):
     """
     Hàm băm thông điệp sử dụng SHA-256.
@@ -16,7 +16,7 @@ def hash_sha256(message):
     """
     pass
 
-# --- Định dạng cho padding.py ---
+#Định dạng cho padding.py
 def add_pkcs1_v15_padding(hash_value, em_length):
     """
     Hàm thêm đệm PKCS#1 v1.5 vào giá trị băm trước khi ký.
@@ -26,7 +26,7 @@ def add_pkcs1_v15_padding(hash_value, em_length):
     """
     pass
 
-# --- Định dạng cho rsa_math.py / keygen.py ---
+#Định dạng cho rsa_math.py / keygen.py
 def generate_key_pair(p=None, q=None, keysize=None):
     """
     Hàm tạo cặp khóa RSA. 
