@@ -2,7 +2,8 @@
 
 # Import các hàm đã được định nghĩa từ các tệp trước đó
 # Giả định bạn đang đặt tệp này cùng thư mục với math_utils.py
-from math_utils import hash_sha256, compare_hashes
+from sha256 import hash_sha256
+from math_utils import compare_hashes
 
 def generate_hmac(key, message):
     """
