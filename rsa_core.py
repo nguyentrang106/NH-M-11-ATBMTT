@@ -1,4 +1,5 @@
 from sha256 import hash_sha256
+from math_utils import compare_hashes
 
 def add_pkcs1_v15_padding(hash_value, em_length):
     """
@@ -67,14 +68,7 @@ def verify_signature(signature, public_key):
     except ValueError:
         return None
 
-def compare_hashes(hash_A, hash_B):
-    """
-    Hàm so sánh hai bản băm để kiểm tra tính toàn vẹn và xác thực[cite: 5].
-    :param hash_A: Bản băm tự tính từ tài liệu nhận được
-    :param hash_B: Bản băm gỡ ra từ chữ ký số
-    :return: True nếu chữ ký hợp lệ, False nếu bị giả mạo[cite: 5]
-    """
-    return hash_A == hash_B and hash_B is not None
+# compare_hashes: một nơi định nghĩa duy nhất là math_utils.py (import ở đầu file)
 
 def verify_message(message, signature, public_key):
     """

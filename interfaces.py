@@ -1,12 +1,3 @@
-#Định dạng cho rsa_math.py / keygen.py
-def generate_key_pair(keysize):
-    """
-    Hàm tạo cặp khóa RSA.
-    :param keysize: Độ dài của khóa (ví dụ: 1024, 2048)
-    :return: Khóa riêng (d, N) và Khóa công khai (e, N)
-    """
-    pass
-
 #Định dạng cho sha256.py
 def hash_sha256(message):
     """
@@ -16,7 +7,7 @@ def hash_sha256(message):
     """
     pass
 
-#Định dạng cho padding.py
+#Định dạng cho rsa_core.py (sơ đồ khối gọi là padding.py)
 def add_pkcs1_v15_padding(hash_value, em_length):
     """
     Hàm thêm đệm PKCS#1 v1.5 vào giá trị băm trước khi ký.
@@ -26,8 +17,8 @@ def add_pkcs1_v15_padding(hash_value, em_length):
     """
     pass
 
-#Định dạng cho rsa_math.py / keygen.py
-def generate_key_pair(p=None, q=None, keysize=None):
+#Định dạng cho keygen.py (sơ đồ khối gọi là rsa_math.py). Tên hàm THẬT trong code: generate_keypair
+def generate_keypair(p=None, q=None, e=None, keysize=None):
     """
     Hàm tạo cặp khóa RSA. 
     Nếu dùng ví dụ trên lớp (số nhỏ), hãy truyền p và q vào.
@@ -35,6 +26,7 @@ def generate_key_pair(p=None, q=None, keysize=None):
     
     :param p: Số nguyên tố thứ nhất (tùy chọn, dùng cho ví dụ tính tay)
     :param q: Số nguyên tố thứ hai (tùy chọn, dùng cho ví dụ tính tay)
+    :param e: Số mũ công khai (tùy chọn; mặc định 65537)
     :param keysize: Độ dài của khóa ngẫu nhiên (ví dụ: 1024, 2048)
     :return: Khóa riêng (d, N) và Khóa công khai (e, N)
     """
